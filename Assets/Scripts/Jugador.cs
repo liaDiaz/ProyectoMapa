@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class Jugador : MonoBehaviour
 {
     public float speed;
+   
      public Text contador;
-    public double tiempo=15;
+  
    public Image    ganaste;
     public Image    perdiste;
-  
+      
+    public Button reiniciar;
+     public Button siguiente;
  
    
     public Slider slider;
@@ -19,6 +22,7 @@ public class Jugador : MonoBehaviour
     {
            
              contador.text = "Time 00:" ;
+             
     }
 
     // Update is called once per frame
@@ -26,45 +30,92 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
+
+
+    float xs = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+     transform.Translate(xs, 0f, 0f);
+     // initially, the temporary vector should equal the player's position
+     Vector3 clampedPosition = transform.position;
+     // Now we can manipulte it to clamp the y element
+     clampedPosition.x = Mathf.Clamp(clampedPosition.x, -9.1f, 9.1f);
+     // re-assigning the transform's position will clamp it
+     transform.position = clampedPosition;
         // input accede al cambio de los parametros 
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        //Time.deltaTime es para que no vaya tan rapido 
-        gameObject.transform.Translate(new Vector2(x,y)*speed*Time.deltaTime);
+            
+        
         //si tiempo es mayor a cero
         // velo reducuiendo
-        if (tiempo > 0)
+        if (Global.tiempo > 0)
         {
+         
           
-            //ScoreText.text = "Score:" + score;
-            tiempo -= Time.deltaTime;
+           Global.tiempo -= Time.deltaTime;
             //
-            contador.text = "Time 00:" + (int)tiempo;
+            contador.text = "Time 00:" + (int)Global.tiempo;
            
 
         }
-
+         Perdiste();
+        // Ganaste();
+        
         
     }
      void OnTriggerEnter2D(Collider2D otro) {
     // si mi mapa no tinen un colider no nesecita el if para que lo encuntre porque no choca con nada
          if(otro.gameObject.tag == "Piano") {
-              slider.value -= 0.05f;
+              slider.value -= 0.9f;
              //se destruira el piano
             Destroy(otro.gameObject);
          
         
          }
-     }
+          if(otro.gameObject.tag == "Itemeat") {
+              slider.value += 0.09f;
+             //se destruira el piano
+            Destroy(otro.gameObject);
+         
+        
+         }
 
+          if(otro.gameObject.tag == "conejo") {
+              speed+= 0.5f;
+             //se destruira el piano
+            Destroy(otro.gameObject);
+         
+        
+         }
+        
+
+     }
+    
 
     
-     void Ganaste(){
-         ganaste.gameObject.SetActive(true);
+     
+    public  void Perdiste(){
+         if(slider.value==0){
+           
+            perdiste.gameObject.SetActive(true);
+            reiniciar.gameObject.SetActive(true);
+        }else if(Global.tiempo<=0 && slider.value!=0){
+            ganaste.gameObject.SetActive(true);
+             siguiente.gameObject.SetActive(true);
+        }
+         
 
      }
-     void Perdiste(){
-         perdiste.gameObject.SetActive(true);
+
+     public void Reiniciar(){
+          perdiste.gameObject.SetActive(false);
+          Global.tiempo=60;
+          reiniciar.gameObject.SetActive(false);
+            siguiente.gameObject.SetActive(false);
+           InvokeRepeating("Reproducir", 1, 1); 
+           InvokeRepeating("Reproduciritem", 2, 1); 
+        
+        slider.value =1;
+          
+
+
 
      }
      

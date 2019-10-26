@@ -69,14 +69,6 @@ public class CardController : MonoBehaviour {
                     setEaten(false);
                 }
             }
-            //Rotate Eyes
-            foreach (Transform t in GetComponentsInChildren<Transform>())
-            {
-                if (t != transform)
-                {
-                    t.up = direction;
-                }
-            }
             //Move
             rb2d.velocity = direction * speed;
             if (rb2d.velocity.x == 0)
