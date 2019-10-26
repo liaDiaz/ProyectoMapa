@@ -120,6 +120,33 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &50472876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5850744790442625991, guid: 2c98591db3dacbc44bbbd7769f3fa9cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5850744790459542635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &50472880
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50472876}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &99531228
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,8 +377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 267976213}
   dialogText: {fileID: 718037304}
-  myDialog: hjola lia
-  needDialog: 0
+  myDialog: 'CUIDADO CON LOS PIANOS +Los items te ayudaran '
+  needDialog: 1
 --- !u!1 &148748700
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,8 +753,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266650299}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.18, y: 6.25, z: -0.59}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.1799994, y: 6.25, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1444,7 +1471,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 10
     m_FontStyle: 3
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
@@ -1576,8 +1603,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013088062, y: 0}
-  m_Size: {x: 0.20220734, y: 0.31999996}
+  m_Offset: {x: 0.006496949, y: 0}
+  m_Size: {x: 0.21538956, y: 0.31999996}
   m_Direction: 0
 --- !u!1 &899808887
 GameObject:
@@ -1699,7 +1726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000116392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42, y: 8.73, z: -0.59}
+  m_LocalPosition: {x: -1.6, y: 8.73, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2958,6 +2985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rabbit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850744790442625991, guid: 2c98591db3dacbc44bbbd7769f3fa9cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: conejo
       objectReference: {fileID: 0}
     - target: {fileID: 5850744790442625989, guid: 2c98591db3dacbc44bbbd7769f3fa9cb,
         type: 3}
