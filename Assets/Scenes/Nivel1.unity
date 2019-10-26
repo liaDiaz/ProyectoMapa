@@ -171,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99531228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.35, y: 4.67, z: -1.1143702}
+  m_LocalPosition: {x: -1.1, y: 4.67, z: -1.1143702}
   m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_Children: []
   m_Father: {fileID: 0}
@@ -415,7 +415,7 @@ MonoBehaviour:
   reproductorGameobject: {fileID: 113031035}
   reproductorGameobjectItem: {fileID: 6255376951043337829, guid: 0c242b130aa5fff4180d7d4af3fb7585,
     type: 3}
-  limiteIzquiedConejo: {fileID: 1000116393}
+  limiteIzquiedConejo: {fileID: 889996251}
   limiteDerechaConejo: {fileID: 266650300}
   reproductorGameobjectConejo: {fileID: 5850744790442625989, guid: 2c98591db3dacbc44bbbd7769f3fa9cb,
     type: 3}
@@ -795,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 198, y: 84}
+  m_AnchoredPosition: {x: -67, y: 84}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267976215
@@ -1606,6 +1606,36 @@ CapsuleCollider2D:
   m_Offset: {x: 0.006496949, y: 0}
   m_Size: {x: 0.21538956, y: 0.31999996}
   m_Direction: 0
+--- !u!1 &889996250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889996251}
+  m_Layer: 0
+  m_Name: DerchaConejo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &889996251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889996250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9, y: 6.25, z: -0.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899808887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,36 +1731,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1000116392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1000116393}
-  m_Layer: 0
-  m_Name: IzquierdaConejo
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1000116393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000116392}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6, y: 8.73, z: -0.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293221320
 GameObject:
@@ -2134,7 +2134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701982294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.6, y: 4.75, z: -42.3}
+  m_LocalPosition: {x: -19.66, y: 4.75, z: -42.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2372,7 +2372,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d21a6592a870adc4b96f1e216f3ac113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b270d99b473ddfd439da6d7a6a7a935e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
