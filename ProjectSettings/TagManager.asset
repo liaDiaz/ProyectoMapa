@@ -8,6 +8,16 @@ TagManager:
   - Piano
   - Itemeat
   - conejo
+  - enemigo1
+  - enemigo2
+  - enemigo3
+  - enemigo4
+  - enemigo5
+  - enemigo6
+  - enemigo7
+  - enemigo8
+  - enemigo9
+  - enemigo
   layers:
   - Default
   - TransparentFX

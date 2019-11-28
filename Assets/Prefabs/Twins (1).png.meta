@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: 08830c034130ff848b0195189bb6e421
+guid: 206c45cb667562848ab6dc6b67a325d4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5488602944466570205
+    second: Twins (1)_0
+  - first:
+      213: -1948320448331170580
+    second: Twins (1)_1
+  - first:
+      213: -9043069111097108122
+    second: Twins (1)_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -84,7 +93,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Twins (1)_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 423
+        width: 302
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266faa6a54e02b84c88a73f7faaed429
+      internalID: 5488602944466570205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twins (1)_1
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 423
+        width: 306
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643caed4d3f699348abe9e098e3f637f
+      internalID: -1948320448331170580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twins (1)_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 63
+        width: 302
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b99312361a035428dfc606dc103623
+      internalID: -9043069111097108122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -17,9 +17,11 @@ public class Jugador : MonoBehaviour
  
    
     public Slider slider;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+       animator= gameObject.GetComponent<Animator>();
            
              contador.text = "Time 00:" ;
              
@@ -30,9 +32,11 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
-
+        //Actualizar speed
+    
 
     float xs = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+
      transform.Translate(xs, 0f, 0f);
      // initially, the temporary vector should equal the player's position
      Vector3 clampedPosition = transform.position;
@@ -40,6 +44,12 @@ public class Jugador : MonoBehaviour
      clampedPosition.x = Mathf.Clamp(clampedPosition.x, -9.1f, 9.1f);
      // re-assigning the transform's position will clamp it
      transform.position = clampedPosition;
+
+     
+      if (xs > 0.1f){
+         animator.SetFloat("speed",speed);
+            //animator.CrossFade ("Player_Corriendo");
+        }
         // input accede al cambio de los parametros 
             
         
