@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237883407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762186297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ganaste: {fileID: 762186299}
   contador: {fileID: 219328177}
-  siguiente: {fileID: 0}
+  siguiente: {fileID: 237883408}
+  musica: {fileID: 139433784}
 --- !u!4 &1617779678
 Transform:
   m_ObjectHideFlags: 0

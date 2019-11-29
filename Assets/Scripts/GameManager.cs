@@ -195,4 +195,6 @@ public class GameManager : MonoBehaviour {
             card.GetComponent<CardController>().setVulnerable(true);
         }
     }
+
+    
 }

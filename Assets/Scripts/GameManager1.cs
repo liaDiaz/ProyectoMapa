@@ -6,12 +6,15 @@ using UnityEngine.UI;
 
 public class GameManager1 : MonoBehaviour
 {
-  
+  public Image ganaste;
+    public Text contador;
+    public Button siguiente;
+    public GameObject musica;
     
     // Start is called before the first frame update
     void Start()
     {
-       
+      
     }
 
     // Update is called once per frame
@@ -30,13 +33,12 @@ public class GameManager1 : MonoBehaviour
         }
            
             //Destroy(gameObject.CompareTag("enemigo"));
-            //Enemigo.SetActive(false);
+           //Enemigo.SetActive(false);
            
     }
+  
         
 
-  
-   
 
     
 }

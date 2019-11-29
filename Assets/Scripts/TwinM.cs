@@ -8,6 +8,7 @@ public class TwinM : MonoBehaviour
     public Image ganaste;
     public Text contador;
     public Button siguiente;
+    public GameObject musica;
      
     // Start is called before the first frame update
     void Start()
@@ -22,19 +23,23 @@ public class TwinM : MonoBehaviour
          
           
            Global.tiempo -= Time.deltaTime;
-            siguiente.gameObject.SetActive(true);           
+                    
 
             //
             contador.text = "Time 00:" + (int)Global.tiempo;
            
 
         }
-    }
-    public  void Perdiste(){
-         if(Global.tiempo==0){
+        if(Global.tiempo<=0){
+            Debug.Log("tirmp");
            
             ganaste.gameObject.SetActive(true);
+            siguiente.gameObject.SetActive(true);  
+            musica.gameObject.SetActive(false); 
             //reiniciar.gameObject.SetActive(true);
          }
+        
     }
+       
+    
 }
