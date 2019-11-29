@@ -38,7 +38,7 @@ public class Navegation : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Return)){
              if(index==0){
-            SceneManager.LoadScene("Nivel1");
+            SceneManager.LoadScene("Instruccionesnivel1");
              }
         
         }

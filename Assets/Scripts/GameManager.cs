@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     
     public Image gameWonScreen;
     public Image gameOverScreen;
+    public Button siguiente;
 
     public GameObject alice;
     public AnimationClip pacmanDeathAnimation;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour {
         }
         gameOverScreen.enabled = false;
         gameWonScreen.enabled = false;
+        siguiente.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -97,10 +99,12 @@ public class GameManager : MonoBehaviour {
             case GameState.GAME_OVER:
                 gameOverScreen.enabled = true;
                 gameWonScreen.enabled = false;
+                siguiente.gameObject.SetActive(false);
                 if (!gameOverSound.isPlaying)
                 {
                     gameOverSound.Play();
                 }
+    
                 if (Input.anyKeyDown)
                 {
                     resetGame();
@@ -112,6 +116,8 @@ public class GameManager : MonoBehaviour {
             case GameState.GAME_WON:
                 gameOverScreen.enabled = false;
                 gameWonScreen.enabled = true;
+                siguiente.gameObject.SetActive(true);
+
                 if (!gameWonSound.isPlaying)
                 {
                     gameWonSound.Play();
@@ -169,6 +175,8 @@ public class GameManager : MonoBehaviour {
         PlayerController playerController = alice.GetComponent<PlayerController>();
         playerController.setLivesLeft(2);
         playerController.setAlive(true);
+        siguiente.gameObject.SetActive(false);
+        gameOverScreen.enabled = false;
         foreach (GameObject card in cards)
         {
             card.GetComponent<CardController>().reset();

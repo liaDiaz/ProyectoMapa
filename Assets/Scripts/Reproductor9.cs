@@ -8,7 +8,7 @@ public class Reproductor9 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         InvokeRepeating("ReproducirEnemigo9", 45, 1); 
+         InvokeRepeating("ReproducirEnemigo9", 45, 25); 
 
     }
 
