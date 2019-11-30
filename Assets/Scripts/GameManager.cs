@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour {
             case GameState.GAME_OVER:
                 gameOverScreen.enabled = true;
                 gameWonScreen.enabled = false;
-                siguiente.gameObject.SetActive(false);
+                
                 if (!gameOverSound.isPlaying)
                 {
                     gameOverSound.Play();
@@ -107,7 +107,6 @@ public class GameManager : MonoBehaviour {
     
                 if (Input.anyKeyDown)
                 {
-                    resetGame();
                     gameState = GameState.PLAY;
                     gameOverScreen.enabled = false;
                     gameWonScreen.enabled = false;
@@ -124,7 +123,6 @@ public class GameManager : MonoBehaviour {
                 }
                 if (Input.anyKeyDown)
                 {
-                    resetGame();
                     gameState = GameState.PLAY;
                     gameOverScreen.enabled = false;
                     gameWonScreen.enabled = false;
